@@ -1,3 +1,5 @@
+// init snapshot storage here
+
 module.exports = class SnapshotInterface {
     static tempDuplicateOfSnapshotBefore(unixTimestamp) {
         // data needs to be copied so that mutations don't affect originals
@@ -72,7 +74,7 @@ module.exports = class SnapshotInterface {
                 // name is allowed to be null or string
             },
         }
-        this.commitToDisk = async () => {
+        this.commitAllToDisk = async () => {
 
         }
     }
